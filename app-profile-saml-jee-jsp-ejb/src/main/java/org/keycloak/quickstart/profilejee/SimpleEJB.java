@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 @Stateless
 @SecurityDomain("keycloak")
 public class SimpleEJB {
+	
 	@RolesAllowed("EmployeeUser")
 	public String getAllSamlPrincipalAttributes(HttpServletRequest req) {
 		SamlPrincipal principal = (SamlPrincipal) req.getUserPrincipal();
